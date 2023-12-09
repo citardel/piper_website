@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "piper_website_backend": {
+      "main": "src/piper_website_backend/main.mo",
+      "type": "motoko"
+    },
+    "piper_website_frontend": {
+      "dependencies": [
+        "piper_website_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/piper_website_frontend/src/index.html"
+      },
+      "source": [
+        "src/piper_website_frontend/assets",
+        "dist/piper_website_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
