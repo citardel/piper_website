@@ -1,13 +1,12 @@
 import * as React from "react";
 import { render } from "react-dom";
-import { custom_greeting_backend } from "../../declarations/custom_greeting_backend";
+import { createRoot } from 'react-dom/client';
+
+// Clear the existing HTML content
+document.body.innerHTML = '<div id="app"></div>';
+
+// Render your React component instead
+const root = createRoot(document.getElementById('app'));
+root.render(<h1>Hello, world</h1>);
 
 
-  return (
-    <div style={{ "fontSize": "30px" }}>
-      Hello
-    </div>
-  );
-
-
-render(<MyHello />, document.getElementById("app"));
