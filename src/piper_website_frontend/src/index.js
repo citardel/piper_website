@@ -1,19 +1,13 @@
-import { piper_website_backend } from "../../declarations/piper_website_backend";
+import * as React from "react";
+import { render } from "react-dom";
+import { custom_greeting_backend } from "../../declarations/custom_greeting_backend";
 
-document.querySelector("form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const button = e.target.querySelector("button");
 
-  const name = document.getElementById("name").value.toString();
+  return (
+    <div style={{ "fontSize": "30px" }}>
+      Hello
+    </div>
+  );
 
-  button.setAttribute("disabled", true);
 
-  // Interact with foo actor, calling the greet method
-  const greeting = await piper_website_backend.greet(name);
-
-  button.removeAttribute("disabled");
-
-  document.getElementById("greeting").innerText = greeting;
-
-  return false;
-});
+render(<MyHello />, document.getElementById("app"));
